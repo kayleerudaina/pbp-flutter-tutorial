@@ -195,8 +195,16 @@ class _MyFormPageState extends State<MyFormPage> {
                                   Center(child: const Text('Informasi Data')),
                                   SizedBox(height: 20),
                                   Center(
-                                    child: Text('Judul: ' + _namaLengkap),
+                                    child: Text('Judul: ' + _namaLengkap)
                                   ),
+                                  if (jenjangSarjana) 
+                                    const Text ('Jenjang: Sarjana'),
+                                  if (jenjangDiploma)
+                                    const Text ('Jenjang: Diploma'),
+                                  if (jenjangMagister)
+                                    const Text ('Jenjang: Magister'),
+                                  if (jenjangDoktor)
+                                    const Text ('Jenjang: Doktor'),
                                   TextButton(
                                     onPressed: () {
                                       Navigator.pop(context);
